@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.beardedhen.androidbootstrap.BootstrapCircleThumbnail;
 import com.beardedhen.androidbootstrap.BootstrapThumbnail;
 import com.squareup.picasso.Picasso;
 
@@ -35,10 +36,11 @@ public class GithubUsersAdapter extends RecyclerView.Adapter<GithubUsersAdapter.
     public void onBindViewHolder(GithubUsersViewHolder holder, int position) {
         holder.tvLogin.setText(userList.get(position).getLogin());
         holder.tvHtmlUrl.setText(userList.get(position).getHtml_url());
+
         Picasso.with(holder.itemView.getContext())
                 .load(userList.get(position).getPhoto_url())
-                .resize(50, 50)
-                .centerCrop()
+                //.resize(size, size)
+                //.centerCrop()
                 .into(holder.ivPhoto);
 
     }
@@ -62,14 +64,14 @@ public class GithubUsersAdapter extends RecyclerView.Adapter<GithubUsersAdapter.
         CardView cv_user;
         TextView tvLogin;
         TextView tvHtmlUrl;
-        BootstrapThumbnail ivPhoto;
+        BootstrapCircleThumbnail ivPhoto;
 
         public GithubUsersViewHolder(View v) {
             super(v);
             cv_user = (CardView)v.findViewById(R.id.cv_user);
             tvLogin = (TextView) v.findViewById(R.id.tvLogin);
             tvHtmlUrl = (TextView) v.findViewById(R.id.tvHtmlUrl);
-            ivPhoto = (BootstrapThumbnail) v.findViewById(R.id.ivPhoto);
+            ivPhoto = (BootstrapCircleThumbnail) v.findViewById(R.id.ivPhoto);
         }
     }
 

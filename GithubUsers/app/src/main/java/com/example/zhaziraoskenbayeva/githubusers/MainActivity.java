@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        GridLayoutManager glm = new GridLayoutManager(this,1);
+        GridLayoutManager glm = new GridLayoutManager(this,2);
         rvGithubUsers.setLayoutManager(glm);
         gua = new GithubUsersAdapter(curUsersList);
         rvGithubUsers.setAdapter(gua);

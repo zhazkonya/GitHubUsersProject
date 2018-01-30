@@ -23,10 +23,13 @@ public class GithubUtils {
     }
 
     public List<User> requestToGithub() {
-        String request = GITHUB_API_BASE;
-        HTTPDataHandler hh = new HTTPDataHandler();
-        String stream = hh.GetHTTPData(request);
-        List<User> users =  processResult(stream);
+        List<User> users = new ArrayList<>();
+        try{
+            String request = GITHUB_API_BASE;
+            HTTPDataHandler hh = new HTTPDataHandler();
+            String stream = hh.GetHTTPData(request);
+            users =  processResult(stream);
+        }catch(Exception e){}
         return users;
     }
 

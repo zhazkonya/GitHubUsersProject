@@ -10,48 +10,45 @@
         android:id="@+id/cv_user"
         android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="230dp"
         android:layout_margin="5dp"
         card_view:cardCornerRadius="4dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <com.beardedhen.androidbootstrap.BootstrapThumbnail
+            <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
                 android:id="@+id/ivPhoto"
-                android:layout_width="150px"
-                android:layout_height="150px"
-                android:padding="5dp"
-                android:layout_gravity="left"
-                />
-
-            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                card_view:hasBorder="false"
+                />
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:textSize="17dp"
+                android:text="user name"
+                android:textColor="@color/colorPrimaryDark"/>
 
-                <TextView
-                    android:id="@+id/tvLogin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:textSize="17dp"
-                    android:text="City name"
-                    android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tvHtmlUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
+                android:textSize="11dp"
+                android:text="html url"
+                android:textColor="@color/black"
+                android:maxLines="20"/>
 
-                <TextView
-                    android:id="@+id/tvHtmlUrl"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:textSize="13dp"
-                    android:text="wather description"
-                    android:textColor="@color/black"/>
 
-            </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
